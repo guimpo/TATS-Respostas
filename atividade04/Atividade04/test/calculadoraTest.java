@@ -25,8 +25,10 @@ public class calculadoraTest {
     public void calcularDesenvolvedorMenor3000() {
         Calculadora c = new Calculadora();
         Desenvolvedor d = new Desenvolvedor();
-        d.setSalarioBase(2999.99f);
-        float expected = (2999.99f * 10) / 100;
+        float salarioBase = 2999.99f;
+        float salarioLiquido = ((90 * salarioBase) / 100);
+        d.setSalarioBase(salarioBase);
+        float expected = salarioLiquido;
         float actual = c.calcular(d);
         assertEquals(expected, actual, 0.01);
     }

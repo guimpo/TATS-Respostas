@@ -12,11 +12,13 @@ public class Calculadora {
         float salario;
         
         if(f.getClass() == Desenvolvedor.class) {
-            salario = f.getSalario();
+            Desenvolvedor d = (Desenvolvedor) f;
+            salario = d.getSalario();
             if(salario >= 3000.00f) {
-                Desenvolvedor d = (Desenvolvedor) f;
                 d.setDesconto((salario * 20) / 100);
                 return d.getDesconto();
+            } else {
+                
             }
         }
         return 1.1f;

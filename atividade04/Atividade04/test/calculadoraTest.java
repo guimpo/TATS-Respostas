@@ -13,8 +13,10 @@ public class calculadoraTest {
     public void calcularDesenvolvedorMaiorIgual3000() {
         Calculadora c = new Calculadora();
         Desenvolvedor d = new Desenvolvedor();
-        d.setSalario(3000.00f);
-        float expected = 600.00f;
+        float salarioBase = 5000.00f;
+        float salarioLiquido = ((80 * salarioBase) / 100);
+        d.setSalario(salarioBase);
+        float expected = salarioLiquido;
         float actual = c.calcular(d);
         assertEquals(expected, actual, 0.01);
     }

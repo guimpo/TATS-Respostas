@@ -18,9 +18,10 @@ public class Calculadora {
                 d.setDesconto((salario * 20) / 100);
                 return d.getDesconto();
             } else {
-                
+                d.setDesconto((salario * 10) / 100);
+                return d.getDesconto();
             }
         }
-        return 1.1f;
+        return 0.0f;
     }
 }

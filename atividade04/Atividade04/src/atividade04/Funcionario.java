@@ -4,10 +4,19 @@ package atividade04;
  *
  * @author paulo
  */
-public abstract class Funcionario {
+abstract class Funcionario {
     private String nome;
     private String email;
-    private float salario;
+    private float salarioBase;
+    private float salarioLiquido;
+
+    public float getSalarioLiquido() {
+        return salarioLiquido;
+    }
+
+    public void setSalarioLiquido(float salarioLiquido) {
+        this.salarioLiquido = salarioLiquido;
+    }
 
     public String getNome() {
         return nome;
@@ -25,11 +34,11 @@ public abstract class Funcionario {
         this.email = email;
     }
 
-    public float getSalario() {
-        return salario;
+    public float getSalarioBase() {
+        return salarioBase;
     }
 
-    public void setSalario(float salario) {
-        this.salario = salario;
+    public void setSalarioBase(float salarioBase) {
+        this.salarioBase = salarioBase;
     }
 }

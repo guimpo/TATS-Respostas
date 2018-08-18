@@ -18,7 +18,8 @@ public class Calculadora {
                 d.setSalarioLiquido((salarioBase * 80) / 100);
                 return d.getSalarioLiquido();
             } else {
-
+                d.setSalarioLiquido((salarioBase * 90) / 100);
+                return d.getSalarioLiquido();
             }
         }
         return 0.0f;

@@ -70,4 +70,16 @@ public class calculadoraTest {
         float actual = c.calcular(t);
         assertEquals(expected, actual, 0.01);
     }
+    
+    @Test
+    public void calcularTestadorMenor2000() {
+        Calculadora c = new Calculadora();
+        Testador t = new Testador();
+        float salarioBase = 1999.99f;
+        float salarioLiquido = ((85 * salarioBase) / 100);
+        t.setSalarioBase(salarioBase);
+        float expected = salarioLiquido;
+        float actual = c.calcular(t);
+        assertEquals(expected, actual, 0.01);
+    }
 }

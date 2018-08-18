@@ -22,6 +22,17 @@ public class Calculadora {
                 return d.getSalarioLiquido();
             }
         }
+        
+        if(f.getClass() == Dba.class) {
+            Dba db = (Dba) f;
+            salarioBase = db.getSalarioBase();
+            if(salarioBase >= 2000.00f) {
+                db.setSalarioLiquido((salarioBase * 75) / 100);
+                return db.getSalarioLiquido();
+            } else {
+                
+            }
+        }
         return 0.0f;
     }
 }

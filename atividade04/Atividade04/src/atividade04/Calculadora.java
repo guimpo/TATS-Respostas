@@ -42,7 +42,8 @@ public class Calculadora {
                 ts.setSalarioLiquido((salarioBase * 75) / 100);
                 return ts.getSalarioLiquido();
             } else {
-                
+                ts.setSalarioLiquido((salarioBase * 85) / 100);
+                return ts.getSalarioLiquido();
             }
         }
         

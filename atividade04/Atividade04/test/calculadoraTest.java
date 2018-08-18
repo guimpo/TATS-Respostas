@@ -45,4 +45,16 @@ public class calculadoraTest {
         float actual = c.calcular(d);
         assertEquals(expected, actual, 0.01);
     }
+    
+    @Test
+    public void calcularDBAMenor2000() {
+        Calculadora c = new Calculadora();
+        Dba d = new Dba();
+        float salarioBase = 1999.99f;
+        float salarioLiquido = ((85 * salarioBase) / 100);
+        d.setSalarioBase(salarioBase);
+        float expected = salarioLiquido;
+        float actual = c.calcular(d);
+        assertEquals(expected, actual, 0.01);
+    }
 }

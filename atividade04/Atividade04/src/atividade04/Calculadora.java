@@ -47,6 +47,17 @@ public class Calculadora {
             }
         }
         
+        if(f.getClass() == Gerente.class) {
+            Gerente g = (Gerente) f;
+            salarioBase = g.getSalarioBase();
+            if(salarioBase >= 5000.00f) {
+                g.setSalarioLiquido((salarioBase * 70) / 100);
+                return g.getSalarioLiquido();
+            } else {
+                
+            }
+        }
+        
         
         return 0.0f;
     }

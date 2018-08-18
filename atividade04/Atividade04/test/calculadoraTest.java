@@ -1,6 +1,7 @@
 import atividade04.Calculadora;
 import atividade04.Dba;
 import atividade04.Desenvolvedor;
+import atividade04.Testador;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -55,6 +56,18 @@ public class calculadoraTest {
         d.setSalarioBase(salarioBase);
         float expected = salarioLiquido;
         float actual = c.calcular(d);
+        assertEquals(expected, actual, 0.01);
+    }
+    
+    @Test
+    public void calcularTestadorMaiorIgual2000() {
+        Calculadora c = new Calculadora();
+        Testador t = new Testador();
+        float salarioBase = 2000.00f;
+        float salarioLiquido = ((75 * salarioBase) / 100);
+        t.setSalarioBase(salarioBase);
+        float expected = salarioLiquido;
+        float actual = c.calcular(t);
         assertEquals(expected, actual, 0.01);
     }
 }

@@ -30,7 +30,8 @@ public class Calculadora {
                 db.setSalarioLiquido((salarioBase * 75) / 100);
                 return db.getSalarioLiquido();
             } else {
-                
+                db.setSalarioLiquido((salarioBase * 85) / 100);
+                return db.getSalarioLiquido();
             }
         }
         return 0.0f;

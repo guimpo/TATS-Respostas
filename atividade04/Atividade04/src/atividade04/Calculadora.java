@@ -54,7 +54,8 @@ public class Calculadora {
                 g.setSalarioLiquido((salarioBase * 70) / 100);
                 return g.getSalarioLiquido();
             } else {
-                
+                g.setSalarioLiquido((salarioBase * 80) / 100);
+                return g.getSalarioLiquido();
             }
         }
         

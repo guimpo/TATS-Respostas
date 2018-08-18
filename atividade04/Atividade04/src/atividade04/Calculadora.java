@@ -34,6 +34,19 @@ public class Calculadora {
                 return db.getSalarioLiquido();
             }
         }
+        
+        if(f.getClass() == Testador.class) {
+            Testador ts = (Testador) f;
+            salarioBase = ts.getSalarioBase();
+            if(salarioBase >= 2000.00f) {
+                ts.setSalarioLiquido((salarioBase * 75) / 100);
+                return ts.getSalarioLiquido();
+            } else {
+                
+            }
+        }
+        
+        
         return 0.0f;
     }
 }
